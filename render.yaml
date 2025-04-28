@@ -1,0 +1,31 @@
+services:
+  - type: web
+    plan: free
+    name: FILEXSHARE-BOT
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 main.py
+    repo: https://github.com/ps-updates/FILE-SHARING-TOKEN-BOT.git
+    branch: main
+    autoDeploy: false
+    envVars:
+      - key: TG_BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: FORCE_SUB_CHANNEL
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: DATABASE_NAME
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: START_PIC
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: PROTECT_CONTENT
+        sync: false
