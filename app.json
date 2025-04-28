@@ -1,0 +1,101 @@
+{
+  "name": "File Store bot by @ps_upfayes",
+  "description": "file sharing bot store posts and it can access by special links",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://github.com/ps-updates/FILE-SHARING-TOKEN-BOT",
+  "logo": "https://i.ibb.co/b71Y2gd/file-43.jpg",
+  "env": {
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": "",
+      "required": true      
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": "",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Paste your mongo db url",
+      "value": "url",
+      "required": true
+    },
+    "DATABASE_NAME":{
+      "description": "Enter your DATABASE_NAME ",
+      "value": "Cluster0"
+    },
+    
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+      "value": "-100",
+      "required": true
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": "0",
+      "required": false
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "",
+      "required": false
+    },
+    "SHORTLINK_URL": {
+      "description": "Your Shortner url. eg: shareus.io",
+      "value": "",
+      "required": false
+    },
+    "SHORTLINK_API": {
+      "description": "shortner api key",
+      "value": "",
+      "required": false
+    },
+    "VERIFY_EXPIRE":{
+        "description": "verification expire time in seconds",
+        "value": "",
+        "required": false
+    },
+    "TUTORIAL": {
+      "description": "Verification tutorial video link",
+      "value": "",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Protect contents from getting forwarded",
+      "value": "False",
+      "required": false
+    },
+    "START_PIC":{
+        "description": "picture will be shown at start command",
+        "value": "",
+        "required": false
+    },
+    
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
+
