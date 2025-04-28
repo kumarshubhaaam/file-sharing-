@@ -1,0 +1,16 @@
+# --- For-Bot-Working --------- #
+git+https://github.com/CaptionLuffy/pyrogram
+pyromod==1.5
+TgCrypto
+python-dotenv
+# --- For-Database ------------ #
+motor==2.5.0
+dnspython
+# --- For-Web-Response ------- #
+pytz
+requests
+bs4
+shortzy
+aiohttp
+aiofiles
+asyncio
